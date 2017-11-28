@@ -79,17 +79,15 @@ class Contact extends Component {
     }
 
     render() {
-        var styles = {
-            textAlign: 'center'
-        };
+        // var styles = {
+        //     textAlign: 'center'
+        // };
 
         let nameRegex = "^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$"
         return (
-
             <div className="container" >
                 <h2>Contact Us</h2>
                 <form className='was-validated'>
-
                     <div className='form-group row'>
                         <label htmlFor="inputName" className="col-sm-1 col-form-label">Name</label>
                         <div className="col-sm-12">
@@ -98,9 +96,7 @@ class Contact extends Component {
                                 Please provide a valid name.
                             </div>
                         </div>
-
                     </div>
-
                     <div className='form-group row'>
                         <label htmlFor="inputEmail" className="col-sm-1 col-form-label">Email</label>
                         <div className="col-sm-12">
@@ -109,7 +105,6 @@ class Contact extends Component {
                                 Please provide a valid email.
                             </div>
                         </div>
-
                     </div>
                     <div className="form-group row">
                         <label htmlFor="inputEmail" className="col-sm-1 col-form-label">Feedback</label>
@@ -117,11 +112,7 @@ class Contact extends Component {
                             <textarea type="text" className="form-control" id="inputFeedback" placeholder="Any feedback..." value={this.state.feedback} onChange={(event) => this.handleFeedBack(event)} />
                         </div>
                     </div>
-                    <div className='form-group row' style={styles}>
-                        <div className='offset-sm-2 col-sm-8'>
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.sendEmail} disabled={!this.state.formValid}>Submit</button>
-                        </div>
-                    </div>
+                    <button className="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.sendEmail} disabled={!this.state.formValid}>Submit</button>
                 </form>
             </div >
         );

@@ -9,6 +9,7 @@ class Header extends Component {
         this.reset = this.reset.bind(this);
     }
 
+    //handle the submit event
     submit(event) {
         event.preventDefault();
         const form = event.target;
@@ -16,6 +17,7 @@ class Header extends Component {
         this.props.handleSubmit(input.value);
     }
 
+    //reset the props
     reset() {
         this.props.reset();
     }
